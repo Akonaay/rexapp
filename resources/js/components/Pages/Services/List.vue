@@ -22,7 +22,7 @@
             <router-link :to="`/practice-areas/${service.id}`" class="alink">
               <img
                 :src="`/storage/service_icons/${service.icon}`"
-                alt
+                :alt="`${service.title}`"
                 class="img-responsive rounded"
               />
             </router-link>

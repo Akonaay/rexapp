@@ -6443,30 +6443,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12331,6 +12307,26 @@ exports.push([module.i, "/*! bulma.io v0.8.2 | MIT License | github.com/jgthms/b
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/material-icons/iconfont/material-icons.css":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/material-icons/iconfont/material-icons.css ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: \"Material Icons\";\n  font-style: normal;\n  font-weight: 400;\n  src: url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.eot */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.eot")) + ");\n  /* For IE6-8 */\n  src: local(\"Material Icons\"), local(\"MaterialIcons-Regular\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.woff2 */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.woff */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff")) + ") format(\"woff\"), url(" + escape(__webpack_require__(/*! ./MaterialIcons-Regular.ttf */ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf")) + ") format(\"truetype\");\n}\n\n.material-icons {\n  font-family: \"Material Icons\";\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  display: inline-block;\n  line-height: 1;\n  text-transform: none;\n  letter-spacing: normal;\n  word-wrap: normal;\n  white-space: nowrap;\n  direction: ltr;\n  /* Support for all WebKit browsers. */\n  -webkit-font-smoothing: antialiased;\n  /* Support for Safari and Chrome. */\n  text-rendering: optimizeLegibility;\n  /* Support for Firefox. */\n  -moz-osx-font-smoothing: grayscale;\n  /* Support for IE. */\n  font-feature-settings: 'liga';\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuesax/dist/vuesax.css":
 /*!*****************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuesax/dist/vuesax.css ***!
@@ -12432,6 +12428,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -40437,6 +40460,80 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.eot":
+/*!************************************************************************!*\
+  !*** ./node_modules/material-icons/iconfont/MaterialIcons-Regular.eot ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/vendor/material-icons/iconMaterialIcons-Regular.eot?96c476804d7a788cc1c05351b287ee41";
+
+/***/ }),
+
+/***/ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf":
+/*!************************************************************************!*\
+  !*** ./node_modules/material-icons/iconfont/MaterialIcons-Regular.ttf ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/vendor/material-icons/iconMaterialIcons-Regular.ttf?d120c85b6eb0549d60483e2980033c15";
+
+/***/ }),
+
+/***/ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff":
+/*!*************************************************************************!*\
+  !*** ./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/vendor/material-icons/iconMaterialIcons-Regular.woff?29b882f018fa6fe75fd338aaae6235b8";
+
+/***/ }),
+
+/***/ "./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2":
+/*!**************************************************************************!*\
+  !*** ./node_modules/material-icons/iconfont/MaterialIcons-Regular.woff2 ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/vendor/material-icons/iconMaterialIcons-Regular.woff2?0509ab09c1b0d2200a4135803c91d6ce";
+
+/***/ }),
+
+/***/ "./node_modules/material-icons/iconfont/material-icons.css":
+/*!*****************************************************************!*\
+  !*** ./node_modules/material-icons/iconfont/material-icons.css ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./material-icons.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/material-icons/iconfont/material-icons.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
 /*!**************************************************!*\
   !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
@@ -63796,7 +63893,7 @@ var staticRenderFns = [
             staticClass: "btn-projects scrollto",
             attrs: { href: "/practice-areas" }
           },
-          [_vm._v("Our Expertise")]
+          [_vm._v("Our Expertises")]
         )
       ])
     ])
@@ -64557,7 +64654,7 @@ var render = function() {
                           staticClass: "img-responsive rounded",
                           attrs: {
                             src: "/storage/service_icons/" + service.icon,
-                            alt: ""
+                            alt: "" + service.title
                           }
                         })
                       ]
@@ -64676,7 +64773,7 @@ var render = function() {
                     "router-link",
                     {
                       staticClass: "text-decoration-none",
-                      attrs: { to: "/services" }
+                      attrs: { to: "/practice-areas" }
                     },
                     [_vm._v("Go Back")]
                   )
@@ -64690,8 +64787,16 @@ var render = function() {
                 [
                   _c(
                     "router-link",
-                    { attrs: { to: "/services", "aria-current": "page" } },
-                    [_vm._v(_vm._s(_vm.service.title))]
+                    {
+                      attrs: { to: "/practice-areas", "aria-current": "page" }
+                    },
+                    [
+                      _vm._v(
+                        "\n            " +
+                          _vm._s(_vm.service.title) +
+                          "\n          "
+                      )
+                    ]
                   )
                 ],
                 1
@@ -64707,11 +64812,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "text-justify col-sm-8" }, [
-              _vm._v(
-                "\n                    " +
-                  _vm._s(_vm.service.description) +
-                  "\n                "
-              )
+              _vm._v(_vm._s(_vm.service.description))
             ])
           ])
         ])
@@ -64744,7 +64845,7 @@ var render = function() {
                             "router-link",
                             {
                               staticClass: "text-decoration-none",
-                              attrs: { to: "/news/" + i.id }
+                              attrs: { to: "/resources/" + i.id }
                             },
                             [
                               _c("img", {
@@ -64765,7 +64866,7 @@ var render = function() {
                                   "router-link",
                                   {
                                     staticClass: "text-decoration-none",
-                                    attrs: { to: "/news/" + i.id }
+                                    attrs: { to: "/resources/" + i.id }
                                   },
                                   [_vm._v(_vm._s(i.title))]
                                 )
@@ -64775,11 +64876,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("span", { staticClass: "date" }, [
                               _vm._v(
-                                "\n                                " +
-                                  _vm._s(
-                                    _vm.moment(i.created_at).format("LL")
-                                  ) +
-                                  "\n                            "
+                                _vm._s(_vm.moment(i.created_at).format("LL"))
                               )
                             ]),
                             _vm._v(" "),
@@ -64794,17 +64891,13 @@ var render = function() {
                                   {
                                     staticClass:
                                       "text-decoration-none more-link",
-                                    attrs: { to: "/news/" + i.id }
+                                    attrs: { to: "/resources/" + i.id }
                                   },
                                   [
                                     _c(
                                       "button",
                                       { staticClass: "button is-warning mt-3" },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Read More →\n                                    "
-                                        )
-                                      ]
+                                      [_vm._v("Read More →")]
                                     )
                                   ]
                                 )
@@ -64837,7 +64930,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12 mt-4 mb-3 position-relative" }, [
       _c("div", { staticClass: "text-center" }, [
-        _c("h1", { staticClass: "h4" }, [_vm._v("Blog Posts")])
+        _c("h1", { staticClass: "h4" }, [_vm._v("Recent News")])
       ])
     ])
   }
@@ -99635,6 +99728,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bulma_css_bulma_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bulma_css_bulma_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuesax/dist/vuesax.css */ "./node_modules/vuesax/dist/vuesax.css");
 /* harmony import */ var vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vuesax_dist_vuesax_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! material-icons/iconfont/material-icons.css */ "./node_modules/material-icons/iconfont/material-icons.css");
+/* harmony import */ var material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(material_icons_iconfont_material_icons_css__WEBPACK_IMPORTED_MODULE_8__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
@@ -99645,7 +99740,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
  // css stylesheet
 
 
- // import "material-icons/iconfont/material-icons.css";
+
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.productionTip = false;
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuesax__WEBPACK_IMPORTED_MODULE_4___default.a);

@@ -10,7 +10,7 @@
         </h2>
         <div>
           <a href="/our-firm" class="btn-get-started scrollto">Get Started</a>
-          <a href="/practice-areas" class="btn-projects scrollto">Our Expertise</a>
+          <a href="/practice-areas" class="btn-projects scrollto">Our Expertises</a>
         </div>
       </div>
 
