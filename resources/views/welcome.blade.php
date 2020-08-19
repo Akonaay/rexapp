@@ -18,8 +18,6 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
         <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
     </head>
@@ -39,6 +37,5 @@
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/popper.min.js') }}"></script>
-        <script src="{{ asset('js/owl.carousel.js') }}"></script>
     </body>
 </html>
