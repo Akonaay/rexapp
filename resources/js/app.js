@@ -10,7 +10,7 @@ import VueCarousel from "@chenfengyuan/vue-carousel";
 // css stylesheet
 import "bulma/css/bulma.css";
 import "vuesax/dist/vuesax.css";
-import "material-icons/iconfont/material-icons.css";
+// import "material-icons/iconfont/material-icons.css";
 
 Vue.config.productionTip = false;
 
