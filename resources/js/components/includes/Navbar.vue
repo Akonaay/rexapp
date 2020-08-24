@@ -30,7 +30,7 @@
             </a>
           </vs-navbar-title>
         </div>
-        <template v-if="!authenticated">
+        <template v-if="!isAuthenticated">
           <!-- <vs-navbar-item index="0">
             <router-link to="/">Home</router-link>
           </vs-navbar-item>-->
@@ -56,7 +56,7 @@
           </vs-navbar-item>
           <vs-navbar-item index="6">
             <vs-dropdown>
-              <a class="a-icon">{{ user.name }}</a>
+              <a class="a-icon">{{ currentUserLogin.user.name }}</a>
 
               <vs-dropdown-menu>
                 <vs-dropdown-item>
@@ -81,17 +81,17 @@ export default {
   },
   computed: {
     ...mapGetters({
-      authenticated: "auth/authenticated",
-      user: "auth/user",
+      isAuthenticated: "auth/isAuthenticated",
+      currentUserLogin: "auth/currentUser",
     }),
   },
   methods: {
     ...mapActions({
-      signOutAction: "auth/signOut",
+      signOutAction: "auth/logout",
     }),
     signOut() {
       this.signOutAction().then(() => {
-        this.$router.replace("/");
+        $router.replace("/");
       });
     },
   },

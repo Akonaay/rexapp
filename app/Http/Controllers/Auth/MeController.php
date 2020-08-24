@@ -12,8 +12,8 @@ class MeController extends Controller
         $this->middleware(['api']);
     }
 
-    public function __invoke(Request $request)
+    public function __invoke()
     {
-        return $request->user();
+        return Auth()->user();
     }
 }

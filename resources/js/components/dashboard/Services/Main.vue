@@ -87,7 +87,7 @@ export default {
       title: "",
       description: "",
       icon: null,
-      message: null
+      message: null,
     };
   },
   methods: {
@@ -95,46 +95,45 @@ export default {
       this.icon = event.target.files[0];
     },
     add() {
+      const config = {
+        headers: { "content-type": "multipart/form-data" },
+      };
       const data = new FormData();
       data.append("title", this.title);
       data.append("description", this.description);
       data.append("icon", this.icon, this.icon.name);
-      axios
-        .post("/api/services/new", data, {
-          "Content-Type": "application/json"
-        })
-        .then(response => {
-          this.title = "";
-          this.description = "";
-          this.icon = null;
-          this.fetchServices();
-        });
+      axios.post("/api/services/new", data, config).then((response) => {
+        this.title = "";
+        this.description = "";
+        this.icon = "";
+        this.fetchServices();
+      });
     },
     fetchServices() {
       axios
         .get("api/services")
-        .then(response => (this.services = response.data.services));
+        .then((response) => (this.services = response.data.services));
     },
     deleteById(service) {
       let conf = window.confirm("Are you sure delete this Data?");
       if (conf) {
         axios
           .delete("/api/services/" + service.id)
-          .then(response => {
+          .then((response) => {
             if (response.status === 200) {
               this.message = "Data success has deleted";
             }
             return this.fetchServices();
           })
-          .catch(error => {
+          .catch((error) => {
             console.log(error);
           });
       }
-    }
+    },
   },
   mounted() {
     this.fetchServices();
-  }
+  },
 };
 </script>
 

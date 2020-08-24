@@ -13,11 +13,14 @@
     <div class="container mt-3">
       <h6 class="sub-title"></h6>
       <h3 class="hny-title">Login</h3>
-      <p class="text-center">{{ message }}</p>
-
+      <div v-show="loginErrors.length > 0">
+        <ul v-for="error in loginErrors" :key="error">
+          <li>{{ error.message }}</li>
+        </ul>
+      </div>
       <div class="row justify-content-center mt-4">
         <div class="col-md-6 col-sm-6 col-xs-6">
-          <form @submit.prevent="authenticate">
+          <form @submit.prevent="signIn(form.email,form.password)">
             <div class="field">
               <p class="control has-icons-left has-icons-right">
                 <input
@@ -59,7 +62,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 export default {
   name: "login",
   data() {
@@ -68,23 +71,22 @@ export default {
         email: "",
         password: "",
       },
-      message: "",
     };
   },
   methods: {
     ...mapActions({
-      signIn: "auth/signIn",
+      userLogin: "auth/login",
     }),
-    authenticate() {
-      this.signIn(this.form)
-        .then(() => {
-          this.$router.replace("/dashboard");
-          this.message = "Logged in!";
-        })
-        .catch((error) => {
-          this.message = "Invalid credentials!";
-        });
+    signIn() {
+      this.userLogin(this.form).then(() =>
+        this.$router.push({ name: "dashboard" })
+      );
     },
+  },
+  computed: {
+    ...mapGetters({
+      loginErrors: "auth/getLoginErrors",
+    }),
   },
 };
 </script>

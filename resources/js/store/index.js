@@ -1,29 +1,22 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import auth from "./auth";
-import services from "./services";
-import news from "./news";
-import profile from "./profile";
+import auth from "./modules/auth";
+import services from "./modules/services";
 
-Vue.use(Vuex)
+const modules = {
+    auth,
+    services
+};
+
+Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state: {
-
-    },
-
     mutations: {
-
+        resetState(state) {
+            _.forOwn(modules.auth, (value, key) => {
+                state[key] = _.cloneDeep(value.state);
+            });
+        },
     },
-
-    actions: {
-
-    },
-
-    modules: {
-        auth,
-        services,
-        news,
-        profile
-    }
-})
+    modules
+});

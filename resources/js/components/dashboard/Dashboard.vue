@@ -39,12 +39,12 @@ import NewsList from "./../dashboard/News/Main.vue";
 import UsersMain from "./../dashboard/Profile/Main.vue";
 import QuotesMain from "./../dashboard/Quotes/Main.vue";
 export default {
-  name: "dashboard-main",
+  name: "dashboard",
   components: {
     ServicesList,
     NewsList,
     UsersMain,
-    QuotesMain
+    QuotesMain,
   },
   data() {
     return {
@@ -55,7 +55,7 @@ export default {
       body: "",
       icon: null,
       news: [],
-      services: []
+      services: [],
     };
   },
 
@@ -79,7 +79,7 @@ export default {
         .then(() => {
           this.$router.replace("/dashboard");
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
     },
@@ -93,59 +93,59 @@ export default {
         .post("/api/services/new", data, {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         })
         .then(() => {
           this.$router.replace("/dashboard");
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error);
         });
     },
     deleteNews(n) {
       axios
         .delete("/api/news/" + n.id)
-        .then(response => {
+        .then((response) => {
           let index = this.news.indexOf(n);
           this.news.splice(index, 1);
           console.log(response.data);
         })
-        .then(error => {
+        .then((error) => {
           console.log(error.toString);
         });
     },
     deleteService(s) {
       axios
         .delete("/api/services/" + s.id)
-        .then(response => {
+        .then((response) => {
           let index = this.services.indexOf(s);
           this.services.splice(index, 1);
           console.log(response.data);
         })
-        .then(error => {
+        .then((error) => {
           console.log(error.toString);
         });
     },
     editNews() {
       axios
         .delete("/api/services/" + s.id)
-        .then(response => {
+        .then((response) => {
           let index = this.services.indexOf(s);
           this.services.splice(index, 1);
           console.log(response.data);
         })
-        .then(error => {
+        .then((error) => {
           console.log(error.toString);
         });
-    }
+    },
   },
   mounted() {
-    axios.get("api/news").then(response => (this.news = response.data.news));
+    axios.get("api/news").then((response) => (this.news = response.data.news));
     axios
       .get("api/services")
-      .then(response => (this.services = response.data.services));
-  }
+      .then((response) => (this.services = response.data.services));
+  },
 };
 </script>
 
